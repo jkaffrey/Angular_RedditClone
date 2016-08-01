@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "title": "I am a post",
+    "author": "Billy Ray",
+    "image": "http://www.kennerlyconst.com/images/sized/images/uploads/portfolio/IMG_0936-640x400.JPG",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a mauris blandit elit commodo malesuada. Aliquam eu magna molestie sapien tempus iaculis. Nulla blandit euismod leo, laoreet pretium nisi tincidunt at. Donec in dignissim lectus, elementum vulputate dolor. Aenean felis libero, pulvinar faucibus viverra in, interdum nec nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae magna id nisl blandit molestie ut non sapien. Phasellus dui sapien, feugiat eu pharetra sit amet, convallis at purus. In sed lectus risus. Fusce iaculis tincidunt scelerisque. Integer mattis erat volutpat lectus accumsan lobortis. Suspendisse ante ex, vulputate elementum augue vel, consequat sodales erat.",
+    "date": "1469812451728",
+    "votes": -10,
+    "comments": [
+      {
+        "author": "ItsMe",
+        "content": "I do what I want",
+        "date": "1469812451728"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "AMERICA",
+    "author": "Billy Ray",
+    "image": "http://unisci24.com/data_images/wlls/3/178778-american-eagle.jpg",
+    "description": "Bacon ipsum dolor amet meatloaf venison andouille biltong ham short ribs capicola pork loin flank porchetta ball tip landjaeger shank rump doner. Flank swine tail, ham t-bone leberkas salami tri-tip. Pork loin pork belly shoulder frankfurter meatball turducken kevin prosciutto swine tri-tip biltong. Ham beef biltong, rump venison pancetta alcatra pig sausage cupim kevin picanha jowl bacon.",
+    "date": "1469820648246",
+    "votes": 3,
+    "comments": []
+  }
+]

@@ -1,0 +1,48 @@
+<div class="list-group-item" ng-animate="'animate'" id="post{{post.id}}">
+  <div class="row">
+    <div class="col-md-3">
+      <img width="300" ng-src="{{post.image}}" alt="icon">
+    </div>
+    <div class="col-md-8">
+      <div class="row row-content">
+        <span class="list-group-item-heading">{{post.title}} | </span>
+        <span class="list-group-item-heading">By: {{post.author}}</span>
+        <center><span style="padding-left: 20px; float: right;">&nbsp;<span class="btn btn-default btn-fab" ng-click="upVote(post.id)"><i class="material-icons">thumb_up</i></span><h5><span ng-class="{ 'label label-default' : post.votes == 0, 'label label-success' : post.votes > 0, 'label label-danger' : post.votes < 0 }">{{post.votes}}</span></h5><span class="btn btn-default btn-fab" ng-click="downVote(post.id)"><i class="material-icons">thumb_down</i></span></span></center>
+
+        <p class="list-group-item-text">{{post.description}}</p>
+      </div>
+      <div class="row">
+        &nbsp;
+      </div>
+      <div class="row">
+        <div class="btn-group btn-group-justified btn-group-raised">
+          <span class="btn"><i class="material-icons">perm_contact_calendar</i>&nbsp;<time>{{ post.date | amCalendar }}</time></span>
+          <span class="btn" ng-click="commentShow = !commentShow"><i class="material-icons">comment</i> {{post.comments.length}} <ng-pluralize count="post.comments.length" when="{ 'one': 'Comment', 'other': 'Comments'}"></ng-pluralize></span>
+          <span ng-click="hideMe = !hideMe" class="btn"><i class="material-icons">mode_edit</i> Add Comment</span>
+        </div>
+      </div>
+      <div class="row" ng-show="hideMe">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="username" class="col-md-1 control-label">Poster: </label>
+            <div class="col-md-3">
+              <input ng-model="author" type="text" class="form-control" id="username" placeholder="Your username">
+            </div>
+
+            <label for="comment" class="col-md-1 control-label">Comment: </label>
+            <div class="col-md-5">
+              <input ng-model="content" type="text" class="form-control" id="comment" placeholder="What are you thinking...">
+            </div>
+          </div>
+
+          <button class="btn btn-default" type="reset" ng-click="addComment(author, content, post.id); commentShow = !commentShow;">Add Comment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Comment Stuffs -->
+  <div ng-show="commentShow" ng-repeat="comment in post.comments">
+    <span class="col-xs-offset-3">{{comment.content}} <em> - was posted by {{comment.author}} on {{comment.date | date}}</em></span>
+  </div>
+</div>
+<div class="list-group-separator"></div>
